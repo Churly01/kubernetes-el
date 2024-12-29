@@ -79,8 +79,6 @@
 
 ;; Requests and state management
 
-(kubernetes-state-define-refreshers secrets)
-
 (defun kubernetes-secrets-delete-marked (state)
   (let ((names (kubernetes-state--get state 'marked-secrets)))
     (dolist (name names)
