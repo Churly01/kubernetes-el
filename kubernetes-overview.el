@@ -334,7 +334,6 @@
     (when (member 'overview sections)
       (kubernetes-pods-refresh verbose)
       (kubernetes-configmaps-refresh verbose)
-      (kubernetes-secrets-refresh verbose)
       (kubernetes-statefulsets-refresh verbose)
       (kubernetes-deployments-refresh verbose))
     (when (member 'configmaps sections)
@@ -357,8 +356,6 @@
       (kubernetes-persistentvolumeclaims-refresh verbose))
     (when (member 'pods sections)
       (kubernetes-pods-refresh verbose))
-    (when (member 'secrets sections)
-      (kubernetes-secrets-refresh verbose))
     (when (member 'services sections)
       (kubernetes-services-refresh verbose))))
 
